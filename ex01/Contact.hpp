@@ -1,8 +1,6 @@
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-# include <limits>
-# include <stdlib.h>
 # include <iostream>
 # include <string.h>
 
@@ -16,8 +14,6 @@ class Contact
 		std::string darkestSecret;
 
 	public:
-		Contact();
-		~Contact();
 		void		fillFields();
 		void		displayRow();
 		void		displayInfo();

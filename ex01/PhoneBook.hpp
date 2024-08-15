@@ -1,9 +1,7 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include <limits>
 # include "Contact.hpp"
-# include <stdlib.h>
 # include <iostream>
 # include <string.h>
 

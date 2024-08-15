@@ -1,24 +1,10 @@
 #include "Contact.hpp"
 
-Contact::Contact()
-{
-	firstName = "";
-	lastName = "";
-	nickName = "";
-	phoneNumber = "";
-	darkestSecret = "";
-}
-
-Contact::~Contact()
-{
-	std::cout << "destruido" << std::endl;
-}
-
 std::string Contact::getPrompt(std::string message)
 {
 	std::string prompt;
 
-	while (1)
+	while (std::cin)
 	{
 		std::cout << message;
 		std::getline(std::cin, prompt);
@@ -39,7 +25,6 @@ void Contact::fillFields()
 	nickName = getPrompt("Nickname: ");
 	phoneNumber = getPrompt("Phone Number: ");
 	darkestSecret = getPrompt("Darkest Secret: ");
-	std::cout << "Contact Added." << std::endl;
 }
 
 int	Contact::empty()
