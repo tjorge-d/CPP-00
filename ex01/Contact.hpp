@@ -17,8 +17,10 @@ class Contact
 		void		fillFields();
 		void		displayRow();
 		void		displayInfo();
+		void		numberValidity();
 		int			empty();
 		std::string	getPrompt(std::string message);
+		std::string	fieldFormater(std::string prompt);
 };
 
 #endif

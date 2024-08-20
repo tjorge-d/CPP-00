@@ -37,8 +37,10 @@ void PhoneBook::displayContacts()
 		std::getline(std::cin, prompt);
 		if (!std::cin)
 			break;
-		if (prompt.size() == 1)
+		if (prompt.length() == 1)
 			i = prompt[0] - 48;
+		else
+			i = 0;
 		if (i >= 1 && i <= 8 && !contact[i - 1].empty())
 		{
 			std::cout << std::endl;
