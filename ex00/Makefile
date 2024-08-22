@@ -1,6 +1,6 @@
 NAME= megaphone
 
-CCXX= c++
+CXX= c++
 CXXFLAGS= -Wall -Werror -Wextra -std=c++98 #-g
 
 SRC= megaphone.cpp
@@ -11,11 +11,11 @@ OBJ= $(addprefix $(OBJ_DIR)/, $(SRC:%.cpp=%.o))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CCXX) $(CXXFLAGS) $(OBJ) -o $@
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $@
 
 $(OBJ_DIR)/%.o: %.cpp
 	mkdir -p $(OBJ_DIR)
-	$(CCXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ_DIR)
