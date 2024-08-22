@@ -25,10 +25,10 @@ void PhoneBook::displayContacts()
 		return;
 	}
 	std::cout << "---------------------------------------------" << std::endl;
-	std::cout << "|Index     |First Name|Last Name |Nickname  |" << std::endl;
+	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
 	for (i = 0; i <= 7 && !contact[i].empty(); i++)
 	{
-		std::cout << "|" << i + 1 << "         ";
+		std::cout << "|" << "         " << i + 1 << "|";
 		contact[i].displayRow();
 	}
 	std::cout << std::endl << "Index of the entry to display: ";

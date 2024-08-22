@@ -79,18 +79,21 @@ int	Contact::empty()
 }
 void Contact::displayRow()
 {
-	std::string	row = "|          |          |          |";
+	std::string	row;
 
-	row.replace(1, firstName.substr(0, 10).length(), firstName.substr(0, 10));
 	if (firstName.length() > 10)
-		row.replace(10, 1, ".");
-	row.replace(12, lastName.substr(0, 10).length(), lastName.substr(0, 10));
+		std::cout << firstName.substr(0, 9) << "." << "|";
+	else
+		std::cout << std::setw(10) << firstName.substr(0, 10) << "|";
 	if (lastName.length() > 10)
-		row.replace(21, 1, ".");
-	row.replace(23, nickName.substr(0, 10).length(), nickName.substr(0, 10));
+		std::cout << lastName.substr(0, 9) << "." << "|";
+	else
+		std::cout << std::setw(10) <<  lastName.substr(0, 10) << "|";
 	if (nickName.length() > 10)
-		row.replace(32, 1, ".");
-	std::cout << row << std::endl;
+		std::cout << nickName.substr(0, 9) << "." << "|";
+	else
+		std::cout << std::setw(10) <<  nickName.substr(0, 10) << "|";
+	std::cout << std::endl;
 }
 
 void Contact::displayInfo()
