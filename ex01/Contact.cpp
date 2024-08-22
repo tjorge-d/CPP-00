@@ -77,22 +77,17 @@ int	Contact::empty()
 		return (1);
 	return (0);
 }
+
 void Contact::displayRow()
 {
-	std::string	row;
-
-	if (firstName.length() > 10)
-		std::cout << firstName.substr(0, 9) << "." << "|";
-	else
-		std::cout << std::setw(10) << firstName.substr(0, 10) << "|";
-	if (lastName.length() > 10)
-		std::cout << lastName.substr(0, 9) << "." << "|";
-	else
-		std::cout << std::setw(10) <<  lastName.substr(0, 10) << "|";
-	if (nickName.length() > 10)
-		std::cout << nickName.substr(0, 9) << "." << "|";
-	else
-		std::cout << std::setw(10) <<  nickName.substr(0, 10) << "|";
+	std::string str[] = {firstName, lastName, nickName, ""};
+	for (int i = 0; !str[i].empty(); i++)
+	{
+		if (str[i].length() > 10)
+			std::cout << str[i].substr(0, 9) << "." << "|";
+		else
+			std::cout << std::setw(10) << str[i].substr(0, 10) << "|";
+	}
 	std::cout << std::endl;
 }
 
